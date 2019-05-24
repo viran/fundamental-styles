@@ -1,10 +1,5 @@
 # Fundamental Styles
 
-[![npm version](https://badge.fury.io/js/fiori-fundamentals.svg)](https://badge.fury.io/js/fiori-fundamentals)
-[![Build Status](https://travis-ci.org/SAP/fundamental.svg?branch=master)](https://travis-ci.org/SAP/fundamental)
-[![Slack](https://img.shields.io/badge/slack-ui--fundamentals-blue.svg?logo=slack)](https://ui-fundamentals.slack.com)
-
-
 ## What is Fundamental Styles?
 
 Fundamental Styles is a light-weight presentation layer that can be used with your UI framework of choice (e.g. Angular, React, Vue, etc.). With Fundamental Styles’ library of stylesheets and HTML tags, developers can build consistent Fiori apps in any web-based technology.
@@ -17,13 +12,6 @@ We are also working on [Angular](https://github.com/SAP/fundamental-ngx), [React
 ## Getting Started
 The library is modular so you can use as little or as much as you need.
 
-### CDN
-The fully compiled, minified library is available via CDN for inclusion in your application.
-
-```
-<link href="//unpkg.com/fiori-fundamentals@latest/dist/fiori-fundamentals.min.css" rel="stylesheet">
-```
-
 ### NPM Package
 
 The compiled CSS for the full library and modules, e.g., core, layout, etc., are distributed via [NPM](https://www.npmjs.com/package/fundamental-styles) along with the SASS source.
@@ -34,7 +22,7 @@ This gives you incredible flexibility to use individual components and enable [a
 npm install fundamental-styles --save
 ````
 
-> NOTE: We only distribute the fonts, icons and compiled CSS and [the SASS source](https://github.com/SAP/fundamental-styles/tree/master/scss), not the full project or HTML for specific components. If your project uses LESS, see [LESS compatible Fiori Fundamentals](https://github.com/SAP/fundamental-styles/wiki/LESS-compatible-Fiori-Fundamentals).
+> NOTE: We only distribute the fonts, icons and compiled CSS and [the SASS source](https://github.com/SAP/fundamental-styles/tree/master/scss), not the full project or HTML for specific components. 
 
 
 ## Working with the Project
@@ -63,7 +51,7 @@ The project has the following prerequisites:
 
 ### Configuring icons path when importing SCSS
 
-If you are importing .scss files in your project, the icons path needs to be configured in your project's .scss file before the Fiori Fundamentals scss import as described below. Please note that the path variable name has to be `$fd-icons-path` in order to override the default value set in `scss/icons/icon.scss`.
+If you are importing .scss files in your project, the icons path needs to be configured in your project's .scss file before the Fundamentals Styles scss import as described below. Please note that the path variable name has to be `$fd-icons-path` in order to override the default value set in `scss/icons/icon.scss`.
 
 ```
 $fd-icons-path : "../node_modules/fundamental-styles/scss/icons/"; // should be declared before the scss import
@@ -84,7 +72,7 @@ If you want to contribute, please check the [Contribution Guidelines](https://gi
 
 ## Versioning
 
-The `fiori-fundamentals` library follows [Semantic Versioning](https://semver.org/). These components strictly adhere to the `[MAJOR].[MINOR].[PATCH]` numbering system (also known as `[BREAKING].[FEATURE].[FIX]`).
+<!-- The `fundamental-styles` library follows [Semantic Versioning](https://semver.org/). These components strictly adhere to the `[MAJOR].[MINOR].[PATCH]` numbering system (also known as `[BREAKING].[FEATURE].[FIX]`). -->
 
 Merges to the `master` branch will be published as a prerelease. Prereleases will include an **rc** version (_e.g._ `[MAJOR].[MINOR].[PATCH]-rc.[RC]`).
 
