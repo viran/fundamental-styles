@@ -4,7 +4,7 @@
   "description": "Fiori Fundamentals is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with the SAP look and feel. Learn more about this project at - http://sap.github.io/fundamental/",
   "main": "index.js",
   "scripts": {
-    "build": "npm run style:remove && npm run style:compile && npm run style:rename && npm run style:postCSS && npm run style:assets",
+    "build": "npm run style:remove && npm run style:compile && npm run style:postCSS && npm run style:assets",
     "build:prod": "npm run build && npm run style:less && npm run style:minify",
     "deploy": "gh-pages -d docs/_site",
     "docs:compile": "npm run build && npm run docs:config && cp scss/icons/SAP-icons.woff docs/css/; cp dist/fiori-fundamentals-ie11.css docs/css",
@@ -27,7 +27,6 @@
     "style:minify": "foreach -t -g \"dist/*.css\" -x \"cleancss -O1 specialComments:1 #{path} -o #{dir}/#{name}.min.css\" --no-c && foreach -t -g \"dist/components/*.css\" -x \"cleancss -O1 specialComments:1 #{path} -o #{dir}/#{name}.min.css\" --no-c",
     "style:postCSS": "postcss --config config/postcss.config.js  --replace dist/**/*.css && postcss --config config/postcss.config.js  --replace dist/*.css",
     "style:remove": "if [ -d dist/ ]; then rm -rf dist/; fi",
-    "style:rename": "mv dist/all.css dist/fiori-fundamentals.css && mv dist/all-ie11.css dist/fiori-fundamentals-ie11.css",
     "test": "server-test start:playground http-get://localhost:3030 test:visual",
     "test:ci-config": "./ci-scripts/generateBackstopConfig.js",
     "test:reference": "backstop reference --config ./test/visual-regression-tests/config/backstopConfig.js --docker",
