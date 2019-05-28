@@ -1,5 +1,3 @@
-// new theme for top nav
-
 .docs-top-nav {
     background-color: #FFFFFF;
     border-bottom: 1px solid fd-color(text, 1);
@@ -55,8 +53,6 @@ a, a:visited{
     }
 }
 
-// new theme for the first of 4 mid-sections
-
 .docs-home{
 
     $docs-home-white-color: docs-color(background, 1);
@@ -73,7 +69,6 @@ a, a:visited{
         @include media("<=tablet") {
             padding-top: 0;
         }
-
 
         &-heading{
             font-size: 70px;
@@ -348,5 +343,4 @@ a, a:visited{
             }
         }
     }
-
 }
