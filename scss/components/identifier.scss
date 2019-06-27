@@ -117,3 +117,57 @@ $block: #{$fd-namespace}-identifier;
       @include fd-var-color("background-color", transparent);
     }
 }
+
+:root {
+  --fd-color-text-1: #32363a;
+  --fd-color-status-1: #0a7e3e;
+  --fd-color-status-2: #e9730c;
+  --fd-color-status-3: #bb0000;
+  --fd-color-status-4: #6a6d70;
+  --fd-color-status-5: #0a6dd1;
+  --fd-color-accent-1: #f5a742;
+  --fd-color-accent-2: #d62929;
+  --fd-color-accent-3: #db1f77;
+  --fd-color-accent-4: #c0399f;
+  --fd-color-accent-5: #6367de;
+  --fd-color-accent-6: #1973cc;
+  --fd-color-accent-7: #0cd7ed;
+  --fd-color-accent-8: #7ca10c;
+  --fd-color-accent-9: #925ace;
+  --fd-color-accent-10: #5c819d;
+  --fd-color-accent-11: #d17f15;
+  --fd-color-accent-12: #d04343;
+  --fd-color-accent-13: #2b78c5;
+  --fd-color-accent-14: #6367de;
+  --fd-color-accent-15: #984bd2;
+}
+
+.fd-has-background-color-accent-1 {
+  background-color: var(--fd-color-accent-1, #f5a742) !important; }
+
+.fd-has-background-color-accent-2 {
+  background-color: var(--fd-color-accent-2, #d62929) !important; }
+
+.fd-has-background-color-accent-3 {
+  background-color: var(--fd-color-accent-3, #db1f77) !important; }
+
+.fd-has-background-color-accent-4 {
+  background-color: var(--fd-color-accent-4, #c0399f) !important; }
+
+.fd-has-background-color-accent-5 {
+  background-color: var(--fd-color-accent-5, #6367de) !important; }
+
+.fd-has-background-color-accent-6 {
+  background-color: var(--fd-color-accent-6, #1973cc) !important; }
+
+.fd-has-background-color-accent-7 {
+  background-color: var(--fd-color-accent-7, #0cd7ed) !important; }
+
+.fd-has-background-color-accent-8 {
+  background-color: var(--fd-color-accent-8, #7ca10c) !important; }
+
+.fd-has-background-color-accent-9 {
+  background-color: var(--fd-color-accent-9, #925ace) !important; }
+
+.fd-has-background-color-accent-12 {
+  background-color: var(--fd-color-accent-12, #d04343) !important; }
