@@ -24,6 +24,7 @@ A table is a set of tabular data. Line items can support data, images and action
             <th class="fd-table__cell" scope="col">Column Header</th>
             <th class="fd-table__cell" scope="col">Column Header</th>
             <th class="fd-table__cell" scope="col">Column Header</th>
+            <th class="fd-table__cell" scope="col">Column Header</th>
         </tr>
     </thead>
     <tbody class="fd-table__body">
@@ -33,6 +34,7 @@ A table is a set of tabular data. Line items can support data, images and action
             </span></td>
             <td class="fd-table__cell"><a href="#" class="fd-has-font-weight-semi">user.name@email.com</a></td>
             <td class="fd-table__cell">First Name</td>
+            <td class="fd-table__cell">Middle Name</td>
             <td class="fd-table__cell">Last Name</td>
             <td class="fd-table__cell">01/26/17</td>
         </tr>
@@ -42,6 +44,7 @@ A table is a set of tabular data. Line items can support data, images and action
             </span></td>
             <td class="fd-table__cell"><a href="#" class="fd-has-font-weight-semi">user.name@email.com</a></td>
             <td class="fd-table__cell">First Name</td>
+            <td class="fd-table__cell">Middle Name</td>
             <td class="fd-table__cell">Last Name</td>
             <td class="fd-table__cell">01/26/17</td>
         </tr>
@@ -51,6 +54,7 @@ A table is a set of tabular data. Line items can support data, images and action
             </span></td>
             <td class="fd-table__cell"><a href="#" class="fd-has-font-weight-semi">user.name@email.com</a></td>
             <td class="fd-table__cell">First Name</td>
+            <td class="fd-table__cell">Middle Name</td>
             <td class="fd-table__cell">Last Name</td>
             <td class="fd-table__cell">01/26/17</td>
         </tr>
@@ -161,6 +165,62 @@ A table is a set of tabular data. Line items can support data, images and action
 
 <br />
 
+## Table with Footer
+
+{% capture table-icon %}
+<table class="fd-table">
+    <thead class="fd-table__header">
+        <tr class="fd-table__row">
+            <th class="fd-table__cell" scope="col"></th>
+            <th class="fd-table__cell" scope="col">Column Header</th>
+            <th class="fd-table__cell" scope="col">Column Header</th>
+            <th class="fd-table__cell" scope="col">Column Header</th>
+            <th class="fd-table__cell" scope="col">Column Header</th>
+        </tr>
+    </thead>
+    <tbody class="fd-table__body">
+        <tr class="fd-table__row">
+            <td class="fd-table__cell"><span class=" fd-image--s fd-image--circle" aria-label="Image label"
+            style="background-image: url('{{site.baseurl}}/images/thumbs/rodney.artichoke.png');">
+            </span></td>
+            <td class="fd-table__cell"><a href="#" class="fd-has-font-weight-semi">user.name@email.com</a></td>
+            <td class="fd-table__cell">First Name</td>
+            <td class="fd-table__cell">Last Name</td>
+            <td class="fd-table__cell">01/26/17</td>
+        </tr>
+        <tr class="fd-table__row">
+            <td class="fd-table__cell"><span class=" fd-image--s fd-image--circle" aria-label="Image label"
+            style="background-image: url('{{site.baseurl}}/images/thumbs/rodney.artichoke.png');">
+            </span></td>
+            <td class="fd-table__cell"><a href="#" class="fd-has-font-weight-semi">user.name@email.com</a></td>
+            <td class="fd-table__cell">First Name</td>
+            <td class="fd-table__cell">Last Name</td>
+            <td class="fd-table__cell">01/26/17</td>
+        </tr>
+        <tr class="fd-table__row">
+            <td class="fd-table__cell"><span class=" fd-image--s fd-image--circle" aria-label="Image label"
+            style="background-image: url('{{site.baseurl}}/images/thumbs/rodney.artichoke.png');">
+            </span></td>
+            <td class="fd-table__cell"><a href="#" class="fd-has-font-weight-semi">user.name@email.com</a></td>
+            <td class="fd-table__cell">First Name</td>
+            <td class="fd-table__cell">Last Name</td>
+            <td class="fd-table__cell">01/26/17</td>
+        </tr>
+    </tbody>
+    <tfoot class="fd-table__footer">
+        <tr class="fd-table__row">
+            <td class="fd-table__cell"></td>
+            <td class="fd-table__cell"></td>
+            <td class="fd-table__cell">First Name</td>
+            <td class="fd-table__cell">Last Name</td>
+            <td class="fd-table__cell"></td>
+        </tr>
+    </tfoot>
+</table>
+{% endcapture %}
+{% include display-component.html component=table-icon %}
+
+
 ## Table with checkbox
 The checkbox input can be used at the beginning of each row to allow for bulk actions.
 It is recommended to add the parameter `aria-selected="true"` to the row that is selected.
@@ -233,7 +293,7 @@ Table rows support semantic row highlighting with the modifiers `fd-table__row--
             <td class="fd-table__cell"><a class="fd-has-font-weight-semi">user.name@email.com</a></td>
             <td class="fd-table__cell">First Name</td>
             <td class="fd-table__cell">Last Name</td>
-            <td class="fd-table__cell">01/26/17</td>
+            <td class="fd-table__cell fd-table__cell--valid">01/26/17</td>
         </tr>
         <tr class="fd-table__row">
             <td class="fd-table__cell"><input class="fd-checkbox" type="checkbox"></td>
@@ -247,7 +307,7 @@ Table rows support semantic row highlighting with the modifiers `fd-table__row--
             <td class="fd-table__cell"><a class="fd-has-font-weight-semi">user.name@email.com</a></td>
             <td class="fd-table__cell">First Name</td>
             <td class="fd-table__cell">Last Name</td>
-            <td class="fd-table__cell">01/26/17</td>
+            <td class="fd-table__cell fd-table__cell--warning">01/26/17</td>
         </tr>
         <tr class="fd-table__row">
             <td class="fd-table__cell"><input class="fd-checkbox" type="checkbox"></td>
@@ -261,7 +321,7 @@ Table rows support semantic row highlighting with the modifiers `fd-table__row--
             <td class="fd-table__cell"><a class="fd-has-font-weight-semi">user.name@email.com</a></td>
             <td class="fd-table__cell">First Name</td>
             <td class="fd-table__cell">Last Name</td>
-            <td class="fd-table__cell">01/26/17</td>
+            <td class="fd-table__cell fd-table__cell--error">01/26/17</td>
         </tr>  
         <tr class="fd-table__row">
             <td class="fd-table__cell"><input class="fd-checkbox" type="checkbox"></td>
@@ -275,7 +335,7 @@ Table rows support semantic row highlighting with the modifiers `fd-table__row--
             <td class="fd-table__cell"><a class="fd-has-font-weight-semi">user.name@email.com</a></td>
             <td class="fd-table__cell">First Name</td>
             <td class="fd-table__cell">Last Name</td>
-            <td class="fd-table__cell">01/26/17</td>
+            <td class="fd-table__cell fd-table__cell--information">01/26/17</td>
         </tr>   
         <tr class="fd-table__row">
             <td class="fd-table__cell"><input class="fd-checkbox" type="checkbox"></td>
