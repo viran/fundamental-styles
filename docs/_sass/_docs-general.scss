@@ -129,7 +129,24 @@ hr {
 }
 
 .docs-tiles {
+<<<<<<< HEAD
   $docs-tiles-color: docs-color(action, 4);
+=======
+    $docs-tiles-color: docs-color(action, 4);
+
+    .fd-tile[role="button"] {
+        border: 1px solid docs-color(neturals, 1);
+        text-decoration: none;
+
+        &:hover {
+            border-color: $docs-tiles-color;
+        }
+        &:active, :focus {
+            border-color: $docs-tiles-color;
+            text-decoration: none;
+        }
+    }
+>>>>>>> add md files
 
   margin: 0 -20px;
   grid-auto-rows: 1fr;
