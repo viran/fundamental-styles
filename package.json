@@ -28,9 +28,12 @@
     "test:linux-fix": "cp -rf scripts/runDocker.js node_modules/backstopjs/core/util/",
     "test:ci-config": "./ci-scripts/generateBackstopConfig.js",
     "test:reference": "backstop reference --config ./test/visual-regression-tests/config/backstopConfig.js --docker",
-    "test:update": "npm run test:linux-fix && server-test start:playground http-get://localhost:3030 test:reference && backstop approve --config ./test/visual-regression-tests/config/backstopConfig.js",
-    "test:update-linux": "npm run test:linux-fix && server-test start:playground http-get://localhost:3030 test:reference && sudo chown -R ${USER}:${USER} . && backstop approve --config ./test/visual-regression-tests/config/backstopConfig.js",
-    "test:visual": "backstop test --config ./test/visual-regression-tests/config/backstopConfig.js --docker"
+    "test:update": "npm run test:update-server-start && npm run test:update-approve",
+    "test:update-linux": "npm run test:update-server-start && sudo chown -R ${USER}:${USER} . && npm run test:update-approve",
+    "test:update-server-start":"npm run test:linux-fix && server-test start:playground http-get://localhost:3030 test:reference",
+    "test:update-approve":"backstop approve --docker --config ./test/visual-regression-tests/config/backstopConfig.js",
+    "test:visual": "backstop test --config ./test/visual-regression-tests/config/backstopConfig.js --docker && npm run test:open-report",
+    "test:open-report": "backstop openReport --config ./test/visual-regression-tests/config/backstopConfig.js"
   },
   "repository": {
     "type": "git",
@@ -44,7 +47,7 @@
   "homepage": "https://sap.github.io/fundamental-styles/",
   "devDependencies": {
     "@sap-theming/theming-base-content": "~11.1.17",
-    "backstopjs": "3.9.2",
+    "backstopjs": "4.5.0",
     "browser-sync": "^2.26.7",
     "clean-css-cli": "^4.3.0",
     "cssnano": "^4.1.10",
