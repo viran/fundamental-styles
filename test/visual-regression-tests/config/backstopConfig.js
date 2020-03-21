@@ -83,6 +83,6 @@ module.exports = {
       "--disable-dev-shm-usage"
     ]
   },
-  "debug": false,
+  "debug": true,
   "debugWindow": false
 }

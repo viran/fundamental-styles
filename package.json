@@ -31,8 +31,8 @@
     "test:update": "npm run test:update-server-start && npm run test:update-approve",
     "test:update-linux": "npm run test:update-server-start && sudo chown -R ${USER}:${USER} . && npm run test:update-approve",
     "test:update-server-start":"npm run test:linux-fix && server-test start:playground http-get://localhost:3030 test:reference",
-    "test:update-approve":"backstop approve --docker --config ./test/visual-regression-tests/config/backstopConfig.js",
-    "test:visual": "backstop test --config ./test/visual-regression-tests/config/backstopConfig.js --docker && npm run test:open-report",
+    "test:update-approve":"backstop approve --config ./test/visual-regression-tests/config/backstopConfig.js",
+    "test:visual": "backstop test --config ./test/visual-regression-tests/config/backstopConfig.js --docker",
     "test:open-report": "backstop openReport --config ./test/visual-regression-tests/config/backstopConfig.js"
   },
   "repository": {
