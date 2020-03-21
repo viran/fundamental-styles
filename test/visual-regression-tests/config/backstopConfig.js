@@ -1,10 +1,9 @@
-const fs = require('fs');
-const process = require('process');
-const backstopCIConfigLocation = 'test/visual-regression-tests/config/backstopConfigCI.json';
-
+const fs = require("fs");
+const process = require("process");
+const backstopCIConfigLocation = "test/visual-regression-tests/config/backstopConfigCI.json";
 
 console.log(process.argv);
-let origin = process.argv.find(arg => arg.includes('linux')) ? 'localhost' : 'host.docker.internal';
+let origin = process.argv.find(arg => arg.includes("linux")) ? "localhost" : "host.docker.internal";
 
 process.argv.push(process.platform);
 
@@ -14,31 +13,28 @@ if (fs.existsSync(backstopCIConfigLocation)) {
     origin = ciConfig.ip;
   }
 }
-console.log('Using URL origin ', origin);
+console.log("Using URL origin ", origin);
 
 const scenarios = [];
 
 // The default scenario configuration. This can be overwritten in each of the config files as needed.
 const defaultScenario = {
-  "urlPrefix": "http://" + origin + ":3030",
-  "delay": 100,
-  "postInteractionWait": 0,
-  "selectorExpansion": false,
-  "expect": 0,
-  "misMatchThreshold": 0.1,
-  "requireSameDimensions": true
-}
+  urlPrefix: "http://" + origin + ":3030",
+  delay: 100,
+  postInteractionWait: 0,
+  selectorExpansion: false,
+  expect: 0,
+  misMatchThreshold: 0.1,
+  requireSameDimensions: true
+};
 
-let prepareComponentScenario = (component) => {
-
+let prepareComponentScenario = component => {
   let componentScenario = {
-    "label": component,
-    "urlSuffix": `/${component}`,
-    "selectors": [
-      `.backstop`,
-    ],
-    "selectorExpansion": true
-  }
+    label: component,
+    urlSuffix: `/${component}`,
+    selectors: [`.backstop`],
+    selectorExpansion: true
+  };
   const scenario = { ...defaultScenario, ...componentScenario };
   // Ensure each config file has a urlSuffix, label and selectors defined.
   if (!scenario.urlSuffix || !scenario.label || !scenario.selectors) {
@@ -46,43 +42,42 @@ let prepareComponentScenario = (component) => {
   }
   scenario.url = scenario.urlPrefix + scenario.urlSuffix;
   scenarios.push(scenario);
-}
+};
 
 // Specific visual test component configurations.  Read the associated component configuration directory and merge the json.
 let prepareAllTestScenarios = () => {
-  fs.readdirSync('test/templates').forEach((component) => {
-    if (!component.includes('.njk') && component != 'spinner') {
+  fs.readdirSync("test/templates").forEach(component => {
+    if (!component.includes(".njk") && component != "spinner") {
       prepareComponentScenario(component);
     }
-  })
+  });
 };
 
 prepareAllTestScenarios();
 
-console.log('Found ' + scenarios.length + ' Visual test scenarios to execute');
+console.log("Found " + scenarios.length + " Visual test scenarios to execute");
 
 module.exports = {
-  "id": "FS",
-  "viewports": [
+  id: "FS",
+  viewports: [
     {
-      "width": 1920,
-      "height": 1080
+      width: 1920,
+      height: 1080
     }
   ],
-  "scenarios": scenarios,
-  "paths": {
-    "bitmaps_reference": "test/visual-regression-tests/reference_images",
-    "bitmaps_test": "test/visual-regression-tests/backstop_data/bitmaps_test",
-    "html_report": "test/visual-regression-tests/backstop_data/html_report",
-    "ci_report": "test/visual-regression-tests/backstop_data/ci_report"
+  scenarios: scenarios,
+  paths: {
+    bitmaps_reference: "test/visual-regression-tests/reference_images",
+    bitmaps_test: "test/visual-regression-tests/backstop_data/bitmaps_test",
+    html_report: "test/visual-regression-tests/backstop_data/html_report",
+    ci_report: "test/visual-regression-tests/backstop_data/ci_report"
   },
-  "report": ["CI"],
-  "engine": "chromy",
-  "engineOptions": {
-    "chromeFlags": [
-      "--disable-dev-shm-usage"
-    ]
+  report: ["CI"],
+  engine: "chromy",
+  engineOptions: {
+    waitTimeout: 120000,
+    chromeFlags: ["--disable-dev-shm-usage"]
   },
-  "debug": true,
-  "debugWindow": false
-}
+  debug: false,
+  debugWindow: false
+};
