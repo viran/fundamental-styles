@@ -172,6 +172,43 @@ To add an offset ot the left of the column use the `--offset-x` modifier. X will
 
 <br/>
 
+
+<br/>
+
+##  Layout Grid with multiple rows
+To use multiple rows, make `fd-row` siblings with each other. This will cause a line break for the new row.
+{% capture layout-grid-multi-level %}
+<div class="fd-container">
+    <div class="fd-row">
+        <div class="fd-col fd-col--12">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+        </div>
+        <div class="fd-col fd-col--4">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+        </div>
+    </div>
+    <div class="fd-row">
+        <div class="fd-col fd-col--6">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+        </div>
+        <div class="fd-col fd-col--6">
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+        </div>
+    </div>
+</div>
+{% endcapture %}
+{% include display-component.html component=layout-grid-multi-level %}
+
+<br/>
+
 ##  Layout Grid with no gap
 To remove gutters between columns apply the `fd-container--no-gap` modifier for the container and the `fd-col--no-gap` modifier with the column.
 {% capture layout-grid-multi-level %}
