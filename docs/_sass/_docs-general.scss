@@ -137,6 +137,7 @@ hr {
     .fd-tile[role="button"] {
         border: 1px solid docs-color(neturals, 1);
         text-decoration: none;
+        height: 100%;
 
         &:hover {
             border-color: $docs-tiles-color;
