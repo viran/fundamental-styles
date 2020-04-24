@@ -17,11 +17,13 @@ Use the `fd-col` to create a column of a certain width. The default value will c
 
 ## Default Layout Grid (12 columns)
 {% capture default %}
-<div class="fd-container">
-    <div class="fd-row">
-        <div class="fd-col">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+<div class ="fd-container__outer">
+    <div class="fd-container">
+        <div class="fd-row">
+            <div class="fd-col">
+                <div style="background-color: #8a8a8a;text-align:center;width:100%;">
+                Default 12 column
+                </div>
             </div>
         </div>
     </div>
@@ -35,16 +37,18 @@ Use the `fd-col` to create a column of a certain width. The default value will c
 ## Layout Grid with sizing (6 columns for all)
 To define the size of that column use the `fd-col--x` modifier, where x can go from 1-12, or 1-16 with the extra large size modifier.
 {% capture size %}
-<div class="fd-container">
-    <div class="fd-row">
-        <div class="fd-col fd-col--6">
-            <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+<div class ="fd-container__outer">
+    <div class="fd-container">
+        <div class="fd-row">
+            <div class="fd-col fd-col--6">
+                <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                6 col at each size
+                </div>
             </div>
-        </div>
-        <div class="fd-col fd-col--6">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div class="fd-col fd-col--6">
+                <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                    6 col at each size
+                </div>
             </div>
         </div>
     </div>
@@ -57,16 +61,18 @@ To define the size of that column use the `fd-col--x` modifier, where x can go f
 ## Layout Grid for form
 To define the size of that column use the `fd-col--x` modifier, where x can go from 1-12, or 1-16 with the extra large size modifier.
 {% capture size %}
-<div class="fd-container">
-    <div class="fd-row">
-        <div class="fd-col fd-col--4">
-            <div>
-            Lorem ipsum dolor sit amet.
+<div class ="fd-container__outer">
+    <div class="fd-container">
+        <div class="fd-row">
+            <div class="fd-col fd-col--4">
+                <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                4 col
+                </div>
             </div>
-        </div>
-        <div class="fd-col fd-col--7">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div class="fd-col fd-col--7">
+                <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                    7 col
+                </div>
             </div>
         </div>
     </div>
@@ -79,16 +85,18 @@ To define the size of that column use the `fd-col--x` modifier, where x can go f
 ##  Layout Grid with sizing and responsiveness
 Add the `fd-col--col-x--size` to define that column size only for a certain screen size and above
 {% capture breakpoints %}
-<div class="fd-container">
-    <div class="fd-row">
-        <div class="fd-col fd-col--6--l">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+<div class ="fd-container__outer">
+    <div class="fd-container">
+        <div class="fd-row">
+            <div class="fd-col fd-col--6--l">
+                <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                    12 col under large, 6 at large
+                </div>
             </div>
-        </div>
-        <div class="fd-col fd-col--6--l">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div class="fd-col fd-col--6--l">
+                <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                    12 col under large, 6 at large
+                </div>
             </div>
         </div>
     </div>
@@ -101,40 +109,42 @@ Add the `fd-col--col-x--size` to define that column size only for a certain scre
 ##  Layout Grid with nesting
 Add an extra `fd-row` class when using more than one row or nesting.
 {% capture layout-grid-multi-level %}
-<div class="fd-container">
-    <div class="fd-row">
-        <div class="fd-col fd-col--6">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            </div>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            </div>
-        </div>
-        <div class="fd-col fd-col--6">
-            <div class="fd-row">
-                <div class="fd-col fd-col--2">
-                    <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div> 
+<div class ="fd-container__outer">
+    <div class="fd-container">
+        <div class="fd-row">
+            <div class="fd-col fd-col--6">
+                <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                    6 col
                 </div>
-                <div class="fd-col fd-col--10">
-                    <div class="fd-row">
-                        <div class="fd-col fd-col--6">
-                            <div>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            </div>
-                        </div>      
-                        <div class="fd-col fd-col--6">
-                            <div class="fd-row">
-                                <div class="fd-col fd-col--6">
-                                    <div>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                    </div>
+                <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                    6 col
+                </div>
+            </div>
+            <div class="fd-col fd-col--6">
+                <div class="fd-row">
+                    <div class="fd-col fd-col--4">
+                        <div style="background-color: #8a8a8a;text-align:center;width:100%;"> 
+                            4 col outer
+                        </div> 
+                    </div>
+                    <div class="fd-col fd-col--8">
+                        <div class="fd-row">
+                            <div class="fd-col fd-col--12">
+                                <div style="background-color: #4a4a4a;text-align:center;width:100%;">
+                                    12 out of 8 col
                                 </div>
-                                <div class="fd-col fd-col--6">
-                                    <div>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            </div>      
+                            <div class="fd-col fd-col--12">
+                                <div class="fd-row">
+                                    <div class="fd-col fd-col--6">
+                                        <div style="background-color: #666666;text-align:center;width:100%;">
+                                        6 out of 12 out of 8 col
+                                        </div>
+                                    </div>
+                                    <div class="fd-col fd-col--6">
+                                        <div style="background-color: #2b2b2b;text-align:center;width:100%;color:white;">
+                                        6 out of 12 out of 8 col 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -156,13 +166,13 @@ To add an offset ot the left of the column use the `--offset-x` modifier. X will
 <div class="fd-container">
     <div class="fd-row">
         <div class="fd-col fd-col--6">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div style="background-color: #2b2b2b;text-align:center;width:100%;color:white;">
+                6 col
             </div>
         </div>
         <div class="fd-col fd-col--4 fd-col--offset-1">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div style="background-color: #8a8a8a;text-align:center;width:100%;"> 
+                4 col with offset of 1
             </div>
         </div>
     </div>
@@ -181,25 +191,25 @@ To use multiple rows, make `fd-row` siblings with each other. This will cause a 
 <div class="fd-container">
     <div class="fd-row">
         <div class="fd-col fd-col--12">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                12 col row 1
             </div>
         </div>
         <div class="fd-col fd-col--4">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                4 col row 1
             </div>
         </div>
     </div>
     <div class="fd-row">
         <div class="fd-col fd-col--6">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div style="background-color: #8a8a8a;text-align:center;width:100%;">>
+                6 col row 2
             </div>
         </div>
         <div class="fd-col fd-col--6">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div style="background-color: #4a4a4a;text-align:center;width:100%;">>
+                6 col row 2
             </div>
         </div>
     </div>
@@ -215,13 +225,13 @@ To remove gutters between columns apply the `fd-container--no-gap` modifier for 
 <div class="fd-container fd-container--no-gap">
     <div class="fd-row">
         <div class="fd-col fd-col--6 fd-col--no-gap">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                6 col no gap
             </div>
         </div>
         <div class="fd-col fd-col--6 fd-col--no-gap">
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                6 col no gap
             </div>
         </div>
     </div>
