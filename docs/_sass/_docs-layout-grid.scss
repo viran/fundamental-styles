@@ -1,0 +1,33 @@
+$block: docs-layout-grid-bg;
+
+.#{$block} {
+    background-color: #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    min-height: 4rem;
+
+    &--color-1{
+        background-color: #bdbdbd;
+    }
+
+    &--color-2{
+        background-color: #8a8a8a;
+    }
+
+    &--color-3{
+        background-color: #666666;
+    }
+
+
+    &--color-3{
+        background-color: #4a4a4a;
+        color: white;
+    }
+
+    &--color-4{
+        background-color: #2b2b2b;
+        color: white;
+    }
+}

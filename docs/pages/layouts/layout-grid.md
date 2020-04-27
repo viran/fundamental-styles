@@ -21,7 +21,7 @@ Use the `fd-col` to create a column of a certain width. The default value will c
     <div class="fd-container">
         <div class="fd-row">
             <div class="fd-col">
-                <div style="background-color: #8a8a8a;text-align:center;width:100%;">
+                <div class="docs-layout-grid-bg">
                 Default 12 column
                 </div>
             </div>
@@ -41,12 +41,12 @@ To define the size of that column use the `fd-col--x` modifier, where x can go f
     <div class="fd-container">
         <div class="fd-row">
             <div class="fd-col fd-col--6">
-                <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                <div class="docs-layout-grid-bg">
                 6 col at each size
                 </div>
             </div>
             <div class="fd-col fd-col--6">
-                <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                <div class="docs-layout-grid-bg docs-layout-grid-bg--color-1">
                     6 col at each size
                 </div>
             </div>
@@ -65,12 +65,12 @@ To define the size of that column use the `fd-col--x` modifier, where x can go f
     <div class="fd-container">
         <div class="fd-row">
             <div class="fd-col fd-col--4">
-                <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                <div class="docs-layout-grid-bg docs-layout-grid-bg">
                 4 col
                 </div>
             </div>
             <div class="fd-col fd-col--7">
-                <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                <div class="docs-layout-grid-bg docs-layout-grid-bg--color-1">
                     7 col
                 </div>
             </div>
@@ -89,12 +89,12 @@ Add the `fd-col--col-x--size` to define that column size only for a certain scre
     <div class="fd-container">
         <div class="fd-row">
             <div class="fd-col fd-col--6--l">
-                <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                <div class="docs-layout-grid-bg docs-layout-grid-bg--color-1">
                     12 col under large, 6 at large
                 </div>
             </div>
             <div class="fd-col fd-col--6--l">
-                <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                <div class="docs-layout-grid-bg docs-layout-grid-bg--color-1">
                     12 col under large, 6 at large
                 </div>
             </div>
@@ -113,36 +113,36 @@ Add an extra `fd-row` class when using more than one row or nesting.
     <div class="fd-container">
         <div class="fd-row">
             <div class="fd-col fd-col--6">
-                <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+                <div class="docs-layout-grid-bg">
                     6 col
                 </div>
-                <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+                <div class="docs-layout-grid-bg docs-layout-grid-bg--color-1">
                     6 col
                 </div>
             </div>
             <div class="fd-col fd-col--6">
                 <div class="fd-row">
                     <div class="fd-col fd-col--4">
-                        <div style="background-color: #8a8a8a;text-align:center;width:100%;"> 
+                        <div class="docs-layout-grid-bg docs-layout-grid-bg--color-2"> 
                             4 col outer
                         </div> 
                     </div>
                     <div class="fd-col fd-col--8">
                         <div class="fd-row">
                             <div class="fd-col fd-col--12">
-                                <div style="background-color: #4a4a4a;text-align:center;width:100%;">
+                                <div class="docs-layout-grid-bg docs-layout-grid-bg--color-3">
                                     12 out of 8 col
                                 </div>
                             </div>      
                             <div class="fd-col fd-col--12">
                                 <div class="fd-row">
                                     <div class="fd-col fd-col--6">
-                                        <div style="background-color: #666666;text-align:center;width:100%;">
+                                        <div class="docs-layout-grid-bg docs-layout-grid-bg--color-4">
                                         6 out of 12 out of 8 col
                                         </div>
                                     </div>
                                     <div class="fd-col fd-col--6">
-                                        <div style="background-color: #2b2b2b;text-align:center;width:100%;color:white;">
+                                        <div class="docs-layout-grid-bg docs-layout-grid-bg--color-1">
                                         6 out of 12 out of 8 col 
                                         </div>
                                     </div>
@@ -166,12 +166,12 @@ To add an offset ot the left of the column use the `--offset-x` modifier. X will
 <div class="fd-container">
     <div class="fd-row">
         <div class="fd-col fd-col--6">
-            <div style="background-color: #2b2b2b;text-align:center;width:100%;color:white;">
+            <div class="docs-layout-grid-bg">
                 6 col
             </div>
         </div>
         <div class="fd-col fd-col--4 fd-col--offset-1">
-            <div style="background-color: #8a8a8a;text-align:center;width:100%;"> 
+            <div class="docs-layout-grid-bg docs-layout-grid-bg--color-1"> 
                 4 col with offset of 1
             </div>
         </div>
@@ -191,24 +191,24 @@ To use multiple rows, make `fd-row` siblings with each other. This will cause a 
 <div class="fd-container">
     <div class="fd-row">
         <div class="fd-col fd-col--12">
-            <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+            <div class="docs-layout-grid-bg">
                 12 col row 1
             </div>
         </div>
         <div class="fd-col fd-col--4">
-            <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+            <div class="docs-layout-grid-bg docs-layout-grid-bg--color-1">
                 4 col row 1
             </div>
         </div>
     </div>
     <div class="fd-row">
         <div class="fd-col fd-col--6">
-            <div style="background-color: #8a8a8a;text-align:center;width:100%;">>
+            <div class="docs-layout-grid-bg docs-layout-grid-bg--color-2">
                 6 col row 2
             </div>
         </div>
         <div class="fd-col fd-col--6">
-            <div style="background-color: #4a4a4a;text-align:center;width:100%;">>
+            <div class="docs-layout-grid-bg docs-layout-grid-bg--color-2">
                 6 col row 2
             </div>
         </div>
@@ -225,12 +225,12 @@ To remove gutters between columns apply the `fd-container--no-gap` modifier for 
 <div class="fd-container fd-container--no-gap">
     <div class="fd-row">
         <div class="fd-col fd-col--6 fd-col--no-gap">
-            <div style="background-color: #dbdbdb;text-align:center;width:100%;">
+            <div class="docs-layout-grid-bg">
                 6 col no gap
             </div>
         </div>
         <div class="fd-col fd-col--6 fd-col--no-gap">
-            <div style="background-color: #bdbdbd;text-align:center;width:100%;">
+            <div class="docs-layout-grid-bg docs-layout-grid-bg--color-1">
                 6 col no gap
             </div>
         </div>
