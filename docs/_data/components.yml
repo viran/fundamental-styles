@@ -66,6 +66,9 @@
     - title: Pagination
       meta: pagination
 
+    - title: Panel
+      meta: panel
+
     - title: Product Switch
       meta: product-switch
 
