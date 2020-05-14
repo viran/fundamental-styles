@@ -58,8 +58,8 @@
   "homepage": "https://sap.github.io/fundamental-styles/",
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.6",
     "@sap-theming/theming-base-content": "~11.1.19",
-    "babel-eslint": "^10.1.0",
     "@storybook/addon-a11y": "^5.3.18",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-cssresources": "^5.3.18",
@@ -70,6 +70,7 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-scss": "^1.0.2",
     "@storybook/svelte": "^5.3.18",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "backstopjs": "3.9.2",
     "browser-sync": "^2.26.7",
