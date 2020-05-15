@@ -87,10 +87,10 @@ The toolbar enables the user to change the UI or trigger an action. For example,
 {% capture toolbar %}
 
   <div class="fd-toolbar fd-toolbar--solid fd-toolbar--title fd-toolbar-active">
-    <span>Title</span>
+    <h4 style="margin-bottom:0px;">Title</h4>
     <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"></span>
-    <button>opt1</button>
-    <button>opt2</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">opt1</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">opt2</button>
   </div>
 
 {% endcapture %}
@@ -123,7 +123,7 @@ Developer has to set width for spacer
 
   <div class="fd-toolbar fd-toolbar--active fd-toolbar--info">
     <span>text</span>
-    <span class="fd-toolbar__spacer" style="width:150px;"></span>
+    <span class="fd-toolbar__spacer fd-toolbar__spacer--fixed" style="width:150px;"></span>
     <span>text</span>
   </div>
 
@@ -152,69 +152,23 @@ Its role is to visually separate items from each other
 {% endcapture %}
 {% include display-component.html component=toolbar %}
 
-## Directory
+## Size
 
-### LTR
+Default size is compact but this can be changed using `fd-toolbar--cozy` modifier
 
-Its role is to visually separate items from each other
 {% capture toolbar %}
 
-<div dir="ltr">
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--info">
-    <span>text</span>
+  <div class="fd-toolbar fd-toolbar--active fd-toolbar--solid fd-toolbar--cozy">
+    <span>Title</span>
+    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
+    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
     <span class="fd-toolbar__separator"></span>
-    <span>text</span>
-  </div>
-  
-  <br>
-  
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--solid">
-    <span>text</span>
-    <span class="fd-toolbar__separator"></span>
-    <span>text</span>
+    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
+    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
   </div>
 
-  <br>
-
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--info">
-    <span>text</span>
-    <span class="fd-toolbar__spacer" style="width:150px;"></span>
-    <span>text</span>
-  </div>
-
-</div>
-
-{% endcapture %}
-{% include display-component.html component=toolbar %}
-
-### RTL
-
-Its role is to visually separate items from each other
-{% capture toolbar %}
-
-<div dir="rtl">
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--info">
-    <span>text</span>
-    <span class="fd-toolbar__separator"></span>
-    <span>text</span>
-  </div>
-  
-  <br>
-  
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--solid">
-    <span>text</span>
-    <span class="fd-toolbar__separator"></span>
-    <span>text</span>
-  </div>
-  
-  <br>
-
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--info">
-    <span>text</span>
-    <span class="fd-toolbar__spacer" style="width:150px;"></span>
-    <span>text</span>
-  </div>
-
-</div>
 {% endcapture %}
 {% include display-component.html component=toolbar %}

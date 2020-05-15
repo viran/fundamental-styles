@@ -10,7 +10,7 @@ $toolbar-separator-height-cozy: 2rem;
 
 $toolbar-spacing: 0.5rem;
 $toolbar-padding: 0 0.5rem;
-$title-toolbar-padding: 0 0.5rem 0 0.1rem;
+$title-toolbar-padding: 0 0.5rem 0 1rem;
 $title-toolbar-height: 2.75rem;
 
 %toolbarStandardColors {
@@ -30,25 +30,15 @@ $title-toolbar-height: 2.75rem;
 }
 
 @mixin toolbarAuto() {
-  @include activeStyles() {
-    @extend %toolbarStandardColors;
-  }
+  background-color: inherit;
 }
 
 @mixin toolbarSolid() {
   background-color: var(--sapBackgroundColor);
-
-  @include activeStyles() {
-    @extend %toolbarStandardColors;
-  }
 }
 
 @mixin toolbarTransparent() {
   background-color: var(--sapToolbar_Background);
-
-  @include activeStyles() {
-    @extend %toolbarStandardColors;
-  }
 }
 
 @mixin toolbarInfo() {
@@ -85,7 +75,7 @@ $title-toolbar-height: 2.75rem;
   border-bottom: none;
 }
 
-%spaerMargin {
+%spacerMargin {
   margin-left: $toolbar-spacing;
 
   @include fd-rtl() {
@@ -96,7 +86,7 @@ $title-toolbar-height: 2.75rem;
 
 @mixin toolbarSpacing() {
   > * ~ *:not(.#{$block}__spacer) {
-    @extend %spaerMargin;
+    @extend %spacerMargin;
   }
 
   > .#{$block}__spacer + *:not(.#{$block}__spacer) {
@@ -112,13 +102,14 @@ $title-toolbar-height: 2.75rem;
   align-items: center;
 
   @include toolbarSpacing();
+  @include toolbarStandard();
+
+  @include activeStyles() {
+    @extend %toolbarStandardColors;
+  }
 
   &--title {
     @include titleToolbar();
-  }
-
-  &--standard {
-    @include toolbarStandard();
   }
 
   &--clear {
@@ -150,12 +141,10 @@ $title-toolbar-height: 2.75rem;
 
   &__spacer {
     height: 100%;
-
-    &--auto {
-      flex: 1 auto;
-    }
+    flex: 1 auto;
 
     &--fixed {
+      flex: none;
       display: inline-block;
     }
   }
