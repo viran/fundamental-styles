@@ -122,7 +122,8 @@
   "pre-commit": {
     "colors": true,
     "run": [
-      "lint:pre-commit"
+      "lint:pre-commit",
+      "storybook:visual"
     ],
     "silent": false
   },
