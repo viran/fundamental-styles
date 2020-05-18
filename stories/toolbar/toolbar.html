@@ -4,7 +4,7 @@
 
   export let toolbar = {
     hideOverflowMenu: false,
-    dir: "ltr"
+    dir: "ltr",
   };
 
   function onPopoverMenuClicked() {
@@ -13,8 +13,8 @@
   }
 </script>
 
-<div dir={toolbar.dir}>
-  <dir style="background-color:green">
+<div dir="{toolbar.dir}">
+  <dir style="background-color: green;">
     <h2>Auto</h2>
     <div class="fd-toolbar fd-toolbar--clear fd-toolbar--active fd-toolbar--clear fd-toolbar--auto">
       <button>Button</button>
@@ -76,14 +76,15 @@
     <div class="fd-popover">
       <div class="fd-popover__control">
         <button
-          on:click={onPopoverMenuClicked}
+          on:click="{onPopoverMenuClicked}"
           class="fd-button fd-button--transparent fd-button--compact sap-icon--overflow"
           aria-controls="wgxzK859"
           aria-haspopup="true"
           aria-expanded="false"
-          aria-label="More" />
+          aria-label="More"
+        />
       </div>
-      <div class="fd-popover__body fd-popover__body--right" aria-hidden={toolbar.hideOverflowMenu} id="wgxzK859">
+      <div class="fd-popover__body fd-popover__body--right" aria-hidden="{toolbar.hideOverflowMenu}" id="wgxzK859">
         <nav class="fd-menu" id="">
           <ul class="fd-menu__list fd-menu__list--no-shadow">
             <li class="fd-menu__item">

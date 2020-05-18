@@ -18,16 +18,16 @@ The toolbar enables the user to change the UI or trigger an action. For example,
 
 {% capture toolbar %}
 
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--solid">
+  <div class="fd-toolbar fd-toolbar--solid">
     <span>Title</span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action1</button>
     <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action2</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action3</button>
     <span class="fd-toolbar__separator"></span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--survey"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pool"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pie-chart"></button>
   </div>
 
 {% endcapture %}
@@ -37,16 +37,16 @@ The toolbar enables the user to change the UI or trigger an action. For example,
 
 {% capture toolbar %}
 
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--clear fd-toolbar--auto">
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+  <div class="fd-toolbar fd-toolbar--clear fd-toolbar--auto">
+    <button class="fd-button fd-button--compact fd-button--transparent">Action</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action2</button>
     <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action3</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action4</button>
     <span class="fd-toolbar__separator"></span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--survey"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pool"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pie-chart"></button>
   </div>
 
 {% endcapture %}
@@ -56,16 +56,16 @@ The toolbar enables the user to change the UI or trigger an action. For example,
 
 {% capture toolbar %}
 
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--clear fd-toolbar--transparent">
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+  <div class="fd-toolbar fd-toolbar--clear fd-toolbar--transparent">
+    <button class="fd-button fd-button--compact fd-button--transparent">Action1</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action2</button>
     <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action3</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action4</button>
     <span class="fd-toolbar__separator"></span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--survey"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pool"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pie-chart"></button>
   </div>
 
 {% endcapture %}
@@ -75,7 +75,7 @@ The toolbar enables the user to change the UI or trigger an action. For example,
 
 {% capture toolbar %}
 
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--info">
+  <div class="fd-toolbar fd-toolbar--info">
     3 item selected
   </div>
 
@@ -91,6 +91,25 @@ The toolbar enables the user to change the UI or trigger an action. For example,
     <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"></span>
     <button class="fd-button fd-button--compact fd-button--transparent">opt1</button>
     <button class="fd-button fd-button--compact fd-button--transparent">opt2</button>
+  </div>
+
+{% endcapture %}
+{% include display-component.html component=toolbar %}
+
+## Active toolbar
+
+{% capture toolbar %}
+
+  <div class="fd-toolbar fd-toolbar--active fd-toolbar--solid">
+    <span>Title</span>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action1</button>
+    <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action2</button>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action3</button>
+    <span class="fd-toolbar__separator"></span>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action4</button>
+    <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
+    <button class="fd-button fd-button--compact fd-button--transparent">Action5</button>
   </div>
 
 {% endcapture %}
@@ -121,7 +140,7 @@ Developer has to set width for spacer
 
 {% capture toolbar %}
 
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--info">
+  <div class="fd-toolbar fd-toolbar--info">
     <span>text</span>
     <span class="fd-toolbar__spacer fd-toolbar__spacer--fixed" style="width:150px;"></span>
     <span>text</span>
@@ -135,7 +154,7 @@ Developer has to set width for spacer
 Its role is to visually separate items from each other
 {% capture toolbar %}
 
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--info">
+  <div class="fd-toolbar fd-toolbar--info">
     <span>text</span>
     <span class="fd-toolbar__separator"></span>
     <span>text</span>
@@ -143,7 +162,7 @@ Its role is to visually separate items from each other
   
   <br>
   
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--solid">
+  <div class="fd-toolbar fd-toolbar--solid">
     <span>text</span>
     <span class="fd-toolbar__separator"></span>
     <span>text</span>
@@ -158,33 +177,34 @@ Default size is compact but this can be changed using `fd-toolbar--cozy` modifie
 
 {% capture toolbar %}
 
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--solid fd-toolbar--cozy">
+  <div class="fd-toolbar fd-toolbar--solid fd-toolbar--cozy">
     <span>Title</span>
     <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
     <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
     <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
     <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
     <span class="fd-toolbar__separator"></span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--survey"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pool"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pie-chart"></button>
   </div>
 
 {% endcapture %}
 {% include display-component.html component=toolbar %}
 
-## Size
+## Overflow
 
-Default size is compact but this can be changed using `fd-toolbar--cozy` modifier
+The only addition OverflowToolbar has is the ability to place inout elements in a popover when
+there is not enough space
 
 {% capture toolbar %}
 
-  <div class="fd-toolbar fd-toolbar--active fd-toolbar--solid fd-toolbar--cozy">
+  <div class="fd-toolbar fd-toolbar--solid fd-toolbar--cozy">
     <span>Title</span>
     <span class="fd-toolbar__spacer fd-toolbar__spacer--auto"> </span>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
-    <button class="fd-button fd-button--compact fd-button--transparent">Button</button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--survey"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pool"></button>
+    <button class="fd-button fd-button--compact fd-button--transparent sap-icon--pie-chart"></button>
     <div class="fd-popover">
       <div class="fd-popover__control">
         <button class="fd-button fd-button--transparent fd-button--compact sap-icon--overflow"
